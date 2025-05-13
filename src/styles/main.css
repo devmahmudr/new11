@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+input {
+  box-sizing: border-box;
+}
+
 ul li {
   list-style: none;
 }
@@ -19,6 +23,10 @@ ul li {
   margin: 0 auto;
   max-width: 1140px;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .header_container {
@@ -31,7 +39,7 @@ ul li {
 
 .header_comp {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .header_comp_left, .header_comp_right {
@@ -52,10 +60,15 @@ ul li {
   color: rgb(161, 169, 184);
 }
 
-.seach_icon,
-.plus_icon {
+.search_icon,
+.plus_icon,
+.xmark_icon {
   position: relative;
   left: 25px;
+}
+
+.xmark_icon {
+  width: 12px;
 }
 
 .header_comp_add_btn {
@@ -68,6 +81,21 @@ ul li {
   color: white;
   border-radius: 6px;
   background: rgb(34, 100, 230);
+  border: none;
+  cursor: pointer;
+  padding-left: 36px;
+}
+
+.header_comp_cancel_btn {
+  padding: 6px 12px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: white;
+  border-radius: 6px;
+  background: rgb(248, 25, 25);
   border: none;
   cursor: pointer;
   padding-left: 36px;
@@ -111,4 +139,45 @@ tbody tr:nth-child(even) {
 
 .header_status, .header_rate, .header_balance, .header_deposite {
   max-width: 100px;
+}
+
+.add_customer_card {
+  margin: 0 auto;
+  background-color: rgb(100, 83, 83);
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+.add_customer_card form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.add_customer_card input {
+  border: 2px solid transparent;
+  padding: 6px 8px;
+  border-radius: 8px;
+  outline: none;
+  overflow: hidden;
+  transition: border ease 0.3s;
+}
+.add_customer_card input:focus {
+  border-color: rgb(34, 100, 230);
+}
+.add_customer_card input[type=submit] {
+  background-color: greenyellow;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.add_customer_card input[type=submit]:focus {
+  border: none;
+}
+.add_customer_card label {
+  padding: 4px;
+  cursor: pointer;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

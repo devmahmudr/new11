@@ -1,0 +1,43 @@
+.add_customer_card{
+  margin: 0 auto;
+  background-color: rgb(100, 83, 83);
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+  
+  input{
+    border: 2px solid transparent;
+    padding: 6px 8px;
+    border-radius: 8px;
+    outline: none;
+    overflow: hidden;
+    transition: border ease 0.3s;
+    &:focus{
+      border-color: rgb(34, 100, 230);;
+    }
+  }
+  input[type="submit"]{
+    background-color: greenyellow;
+    margin-top: 20px;
+    cursor: pointer;
+    &:focus{
+      border: none;
+    }
+  }
+
+  label{
+    padding: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}

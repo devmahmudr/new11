@@ -1,4 +1,4 @@
-.header_container{
+.header_container {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -7,7 +7,7 @@
 }
 .header_comp {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   &_left,
   &_right {
@@ -25,10 +25,14 @@
   }
   padding-left: 36px;
 }
-.seach_icon,
-.plus_icon {
+.search_icon,
+.plus_icon,
+.xmark_icon {
   position: relative;
   left: 25px;
+}
+.xmark_icon{
+  width: 12px;
 }
 .header_comp_add_btn {
   padding: 6px 12px;
@@ -48,4 +52,18 @@
   //   transition: all ease 0.7s;
   //   transform: translateY(-5px);
   // }
+}
+.header_comp_cancel_btn {
+  padding: 6px 12px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: white;
+  border-radius: 6px;
+  background: rgb(248, 25, 25);
+  border: none;
+  cursor: pointer;
+  padding-left: 36px;
 }

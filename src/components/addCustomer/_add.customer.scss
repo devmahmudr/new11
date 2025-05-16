@@ -2,12 +2,16 @@
   margin: 0 auto;
   background-color: rgb(100, 83, 83);
   width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   color: white;
   padding: 20px;
   border-radius: 12px;
+
+  h3{
+    text-align: center;
+  }
   
   form{
     display: flex;

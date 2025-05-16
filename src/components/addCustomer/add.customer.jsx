@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./_add.customer.scss";
 import axios from "axios";
 
-export default function AddCustomerCard({ active }) {
+export default function AddCustomerCard({ active, title }) {
   const [customerInfo, setCustomerInfo] = useState({
     name: "",
     description: "",
@@ -32,8 +32,8 @@ export default function AddCustomerCard({ active }) {
       })
       .then((res) => {
         console.log(res);
-        
-        // location.reload();
+
+        location.reload();
       })
       .catch((err) => {
         console.log(err);
@@ -41,9 +41,9 @@ export default function AddCustomerCard({ active }) {
   };
 
   return (
-
     <div className={active ? "add_customer_card" : "hidden"}>
-      <form action="POST" onSubmit={handleSubmit}>
+      <h3>{title}</h3>
+      <form action="POST" onSubmit={handleSubmit} className="">
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -51,7 +51,7 @@ export default function AddCustomerCard({ active }) {
           placeholder="John"
           onChange={handleChange}
           name="name"
-          // value={customerInfo.name}
+          // value={customerInfo.name.toUpperCase().trim()}
           required={true}
         />
         <label htmlFor="descriptione">Description:</label>
@@ -61,7 +61,7 @@ export default function AddCustomerCard({ active }) {
           placeholder="Description"
           onChange={handleChange}
           name="description"
-          // value={customerInfo.description}
+          // value={customerInfo.description.trim(2)}
         />
         <label htmlFor="rate">Rate:</label>
         <input

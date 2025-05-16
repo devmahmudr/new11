@@ -125,6 +125,10 @@ th {
   font-size: 12px;
 }
 
+tr {
+  cursor: pointer;
+}
+
 tbody tr:nth-child(even) {
   background: rgba(244, 247, 252, 0.75);
 }
@@ -141,16 +145,63 @@ tbody tr:nth-child(even) {
   max-width: 100px;
 }
 
+.expand-row td {
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  background-color: #f8f8f8;
+}
+.expand-row td .button-wrapper {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  animation: fadeIn 0.3s ease;
+}
+.expand-row td .btn_default {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 2%;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 65px;
+}
+.expand-row td .btn_default:hover {
+  transform: scale(1.04);
+}
+.expand-row td .edit_btn {
+  background: rgb(34, 100, 230);
+}
+.expand-row td .delete_btn {
+  background: rgb(248, 25, 25);
+}
+.expand-row td .cancel_btn {
+  background: rgb(83, 78, 83);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .add_customer_card {
   margin: 0 auto;
   background-color: rgb(100, 83, 83);
   width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   padding: 20px;
   border-radius: 12px;
+}
+.add_customer_card h3 {
+  text-align: center;
 }
 .add_customer_card form {
   display: flex;

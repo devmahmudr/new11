@@ -23,7 +23,7 @@ export default function HeaderComp({onToggleCustomer, isActive}) {
           <button className={!isActive ? "header_comp_add_btn" : "header_comp_cancel_btn"} onClick={onToggleCustomer}>{!isActive ? "ADD NEW CUSTOMER" : "CANCEL"}</button>
         </div>
       </header>
-      <AddCustomerCard active={isActive}/>
+      <AddCustomerCard active={isActive} title={"CREATE CUSTOMER"}/>
     </div>
   );
 }
